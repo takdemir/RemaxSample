@@ -1,7 +1,8 @@
 import React from "react";
 import {View, FlatList, Dimensions, Text} from "react-native";
-import styles from './styles';
+import styles from '../../assets/css/home_screen_styles';
 import Images from '../../assets/images/images';
+import Slider from "../../components/combined/slider";
 const {width: WINDOW_WIDTH, height: WINDOW_HEIGHT} = Dimensions.get("window");
 
 const HomeScreen = () => {
@@ -54,9 +55,7 @@ const HomeScreen = () => {
 
   const renderItem = ({item}) => {
     return (
-      <View>
-        <Text>{item.name}</Text>
-      </View>
+        <Slider items={item} key={item.id} />
     )
   }
 
